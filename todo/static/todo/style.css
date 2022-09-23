@@ -49,6 +49,7 @@ ul li:hover {
     right: 0;
     top: 0;
     padding: 12px 32px 12px 32px;
+    background-color: #ffcccb;
   }
 
 .close a:link {
@@ -62,7 +63,30 @@ ul li:hover {
 }
 
 .close:hover {
-    background-color: #f44336;
+    background-color: red;
+}
+
+.update {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 32px 12px 32px;
+    margin-right: 110px;
+    background-color: greenyellow;
+  }
+
+.update a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.update a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.update:hover {
+    background-color: green;
 }
 
 /* Style the header */
@@ -86,12 +110,12 @@ h2{
     clear: both;
   }
 
-/* Style the input */
-input {
+/* Style the tittlefield */
+#tittleField {
     margin: 0;
     border: none;
     border-radius: 10px;
-    width: 88%;
+    width: 90%;
     padding: 10px;
     float: left;
     font-size: 16px;
@@ -115,4 +139,19 @@ input {
   .addBtn:hover {
     background-color: #bbb;
     font-weight: bold;
+  }
+
+  /* Style the "Update" button */
+.updateBtn {
+    padding: 8px;
+    width: 8%;
+    background: #d9d9d9;
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+    margin-left: 15px;
   }

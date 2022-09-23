@@ -1,0 +1,10 @@
+{% load static %} 
+<link rel="stylesheet" href="{% static 'todo/style.css' %}">
+<div id="myDIV" class="header">
+    <h2>Django To Do List App</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{updateForm.tittle}}
+        <button type="submit" class="updateBtn">Update</button>
+    </form>
+</div>

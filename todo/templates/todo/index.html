@@ -6,21 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'todo/style.css' %}"
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+    
 </head>
 <body>
     <div id="myDIV" class="header">
         <h2>Django To Do List App</h2>
-        <form action="" method="POST">
+        <form method="POST">
             {% csrf_token %}
-            <input type="text" name="tittle" id="myInput" placeholder="To do...">
+            {{form.tittle}}
             <button type="submit" class="addBtn">Add</button>
         </form>
     </div>
 
     <ul id="myUL">
         {% for todo in todos %}
-        <li>{{todo.tittle}} <span class="close"><a href="delete/{{todo.id}}">Delete</a></span></li>
+        <li>
+            {{todo.tittle}} 
+            <span class="update"><a href={% url 'updateItem' todo.id %}>Update</a></span>
+            <span class="close"><a href={% url 'deleteItem' todo.id %}>Delete</a></span>
+        </li>
         {% endfor %}
 
 
